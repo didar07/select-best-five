@@ -49,3 +49,14 @@ function disableBtn5() {
 function disableBtn6() {
     document.getElementById('btn-6').disabled = true;
 }
+
+document.getElementById('btn-calculate').addEventListener('click', function () {
+
+    let playerCostString = document.getElementById('player-cost')
+    let playerCost = parseFloat(playerCostString)
+    let perPlayerCost = playerCost.value
+
+
+    const totalPlayerCost = perPlayerCost * 5
+    console.log(totalPlayerCost)
+})

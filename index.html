@@ -31,8 +31,8 @@
 
     <main>
         <section class="mt-8 flex">
-            <div class="grid grid-cols-3 gap-4">
-                <div class="card w-96 bg-base-100 shadow-xl">
+            <div class="grid grid-cols-3 gap-x-8 gap-4">
+                <div class="card w-96 bg-base-100 shadow-xl p-10">
                     <figure><img src="images/mbappe.jpg" alt="" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Kylian Mbappe</h2>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl p-10">
                     <figure><img src="images/messi2.jpg" alt="" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Lionel Messi</h2>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl p-10">
                     <figure><img src="images/neymar.jpg" alt="" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Neymar</h2>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl p-10">
                     <figure><img src="images/ramos.jpg" alt="" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Sergio Ramos</h2>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl p-10">
                     <figure><img src="images/renato.jpg" alt="" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Renato Sanches</h2>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl p-10">
                     <figure><img src="images/hakimi.jpg" alt="" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Ashraf Hakimi</h2>
@@ -113,17 +113,22 @@
                             </tr>
                         </thead>
                         <tbody id="call-player">
-                            <!-- <tr>
-                                <th>1</th>
-                                <td>hey player</td>
-                            </tr> -->
+                            <tr></tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="mt-10">
+                <div class="mt-14">
                     <h2 class="text-center text-white text-2xl font-semibold">Budget</h2>
-                    <h2 class="text-white mt-6 font-semibold">per player</h2> <input type="number">
-                    <button class="btn-primary px-10 py-4 rounded-lg font-semibold mt-6">Calculate</button>
+                    <h2 class="text-white mt-5 font-semibold">per player</h2> <input id="player-cost" type="number">
+                    <br>
+                    <button id="btn-calculate"
+                        class="btn-primary px-10 py-3 rounded-lg font-semibold mt-4">Calculate</button>
+                    <h2 class="text-white font-semibold mt-4">player expenses</h2> <span> </span>
+                    <h2 class="text-white font-semibold mt-8">Manager</h2> <input type="number">
+                    <h2 class="text-white font-semibold mt-8">Coach</h2> <input type="number">
+                    <button class="btn-primary px-10 py-3 rounded-lg font-semibold mt-4">Calculate Total</button>
+                    <h2 class="text-white font-semibold mt-8">Total</h2> <span> </span>
+
                 </div>
             </div>
 
