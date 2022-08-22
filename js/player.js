@@ -53,10 +53,26 @@ function disableBtn6() {
 document.getElementById('btn-calculate').addEventListener('click', function () {
 
     let playerCostString = document.getElementById('player-cost')
-    let playerCost = parseFloat(playerCostString)
-    let perPlayerCost = playerCost.value
+    let playerCost = parseFloat(playerCostString.value)
+
+    const totalPlayerCost = playerCost * playerCart.length
+
+    const playerExpenses = document.getElementById('player-expense')
+    playerExpenses.innerText = totalPlayerCost
+})
+
+document.getElementById('total-calculate').addEventListener('click', function () {
+    let managerCostString = document.getElementById('manager-cost')
+    let managerCost = parseFloat(managerCostString.value)
+
+    let coachCostString = document.getElementById('coach-cost')
+    let coachCost = parseFloat(coachCostString.value)
+
+    let totalCost = totalPlayerCost + managerCost + coachCost
+
+    let totalExpense = document.getElementById('total-expense')
+
+    totalExpense.innerText = totalCost
 
 
-    const totalPlayerCost = perPlayerCost * 5
-    console.log(totalPlayerCost)
 })
