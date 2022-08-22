@@ -38,7 +38,8 @@
                         <h2 class="card-title">Kylian Mbappe</h2>
                         <p>36 Goals 120 Assist</p>
                         <div class="card-actions justify-center">
-                            <button onclick="addToCart(this)" class="btn btn-primary px-10">select</button>
+                            <button id="btn-1" onclick="disableBtn(),addToCart(this)"
+                                class="btn btn-primary px-10">select</button>
                         </div>
                     </div>
                 </div>
@@ -48,7 +49,8 @@
                         <h2 class="card-title">Lionel Messi</h2>
                         <p>36 Goals 120 Assist</p>
                         <div class="card-actions justify-center">
-                            <button onclick="addToCart(this)" class="btn btn-primary px-10">select</button>
+                            <button id="btn-2" onclick="disableBtn2(),addToCart(this)"
+                                class="btn btn-primary px-10">select</button>
                         </div>
                     </div>
                 </div>
@@ -58,7 +60,8 @@
                         <h2 class="card-title">Neymar</h2>
                         <p>36 Goals 120 Assist</p>
                         <div class="card-actions justify-center">
-                            <button onclick="addToCart(this)" class="btn btn-primary px-10">select</button>
+                            <button id="btn-3" onclick="disableBtn3(),addToCart(this)"
+                                class="btn btn-primary px-10">select</button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +71,8 @@
                         <h2 class="card-title">Sergio Ramos</h2>
                         <p>36 Goals 120 Assist</p>
                         <div class="card-actions justify-center">
-                            <button onclick="addToCart(this)" class="btn btn-primary px-10">select</button>
+                            <button id="btn-4" onclick="disableBtn4(),addToCart(this)"
+                                class="btn btn-primary px-10">select</button>
                         </div>
                     </div>
                 </div>
@@ -78,7 +82,8 @@
                         <h2 class="card-title">Renato Sanches</h2>
                         <p>36 Goals 120 Assist</p>
                         <div class="card-actions justify-center">
-                            <button onclick="addToCart(this)" class="btn btn-primary px-10">select</button>
+                            <button id="btn-5" onclick="disableBtn5(),addToCart(this)"
+                                class="btn btn-primary px-10">select</button>
                         </div>
                     </div>
                 </div>
@@ -88,23 +93,23 @@
                         <h2 class="card-title">Ashraf Hakimi</h2>
                         <p>36 Goals 120 Assist</p>
                         <div class="card-actions justify-center">
-                            <button onclick="addToCart(this)" class="btn btn-primary px-10">select</button>
+                            <button id="btn-6" onclick="disableBtn6(),addToCart(this)"
+                                class="btn btn-primary px-10">select</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- ... -->
-            <div>
-                <h2 class="text-2xl font-semibold">selected <span class="text-blue-500" id="total-added-player">0</span>
+            <div class="ml-14 p-8 justify-center bg-black rounded-lg h-1/2">
+                <h2 class="text-2xl font-semibold text-white text-center">selected <span class="text-blue-500"
+                        id="total-added-player">0</span>
                 </h2>
                 <div class="overflow-x-auto">
                     <table class="table w-full">
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th></th>
                                 <th>Name</th>
-
                             </tr>
                         </thead>
                         <tbody id="call-player">
@@ -115,7 +120,13 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="mt-10">
+                    <h2 class="text-center text-white text-2xl font-semibold">Budget</h2>
+                    <h2 class="text-white mt-6 font-semibold">per player</h2> <input type="number">
+                    <button class="btn-primary px-10 py-4 rounded-lg font-semibold mt-6">Calculate</button>
+                </div>
             </div>
+
         </section>
     </main>
     <script src="js/player.js"></script>
