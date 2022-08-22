@@ -31,6 +31,8 @@ function addToCart(element) {
 
 }
 
+//--------- Button disable ---------//
+
 function disableBtn() {
     document.getElementById('btn-1').disabled = true;
 }
@@ -50,6 +52,9 @@ function disableBtn6() {
     document.getElementById('btn-6').disabled = true;
 }
 
+
+// -----------calculating player cost--------//
+
 document.getElementById('btn-calculate').addEventListener('click', function () {
 
     const playerCostString = document.getElementById('player-cost')
@@ -59,6 +64,9 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 
     const playerExpenses = document.getElementById('player-expense')
     playerExpenses.innerText = totalPlayerCost
+
+
+    // --------Calculating Total Cost ------------//
 
     document.getElementById('total-calculate').addEventListener('click', function () {
         const managerCostString = document.getElementById('manager-cost')
