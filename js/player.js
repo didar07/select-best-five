@@ -52,27 +52,28 @@ function disableBtn6() {
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
 
-    let playerCostString = document.getElementById('player-cost')
-    let playerCost = parseFloat(playerCostString.value)
+    const playerCostString = document.getElementById('player-cost')
+    const playerCost = parseFloat(playerCostString.value)
 
     const totalPlayerCost = playerCost * playerCart.length
 
     const playerExpenses = document.getElementById('player-expense')
     playerExpenses.innerText = totalPlayerCost
+
+    document.getElementById('total-calculate').addEventListener('click', function () {
+        const managerCostString = document.getElementById('manager-cost')
+        const managerCost = parseFloat(managerCostString.value)
+
+        const coachCostString = document.getElementById('coach-cost')
+        const coachCost = parseFloat(coachCostString.value)
+
+        const totalCost = totalPlayerCost + managerCost + coachCost
+
+        const totalExpense = document.getElementById('total-expense')
+
+        totalExpense.innerText = totalCost
+
+
+    })
 })
 
-document.getElementById('total-calculate').addEventListener('click', function () {
-    let managerCostString = document.getElementById('manager-cost')
-    let managerCost = parseFloat(managerCostString.value)
-
-    let coachCostString = document.getElementById('coach-cost')
-    let coachCost = parseFloat(coachCostString.value)
-
-    let totalCost = totalPlayerCost + managerCost + coachCost
-
-    let totalExpense = document.getElementById('total-expense')
-
-    totalExpense.innerText = totalCost
-
-
-})
