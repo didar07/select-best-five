@@ -6,9 +6,7 @@ function display(totalPlayer) {
     tableBody.innerHTML = ''
 
     for (let i = 0; i < totalPlayer.length; i++) {
-        if (totalPlayer.length > 5) {
-            alert('opps you already selected 5 players')
-        }
+
         const name = playerCart[i].playerName
 
         const tr = document.createElement("tr")
@@ -20,22 +18,12 @@ function display(totalPlayer) {
     }
 }
 
-function addToCart(element) {
-    const playerName = element.parentNode.parentNode.children[0].innerText
+// --------- Button disable ---------//
 
-    const playerObj = { playerName: playerName }
-    playerCart.push(playerObj)
-
-    document.getElementById('total-added-player').innerText = playerCart.length
-    display(playerCart)
-
-}
-
-//--------- Button disable ---------//
-
-function disableBtn() {
+function disableBtn1() {
     document.getElementById('btn-1').disabled = true;
 }
+
 function disableBtn2() {
     document.getElementById('btn-2').disabled = true;
 }
@@ -52,6 +40,21 @@ function disableBtn6() {
     document.getElementById('btn-6').disabled = true;
 }
 
+function addToCart(element) {
+
+    const playerName = element.parentNode.parentNode.children[0].innerText
+    const playerObj = { playerName: playerName }
+    playerCart.push(playerObj)
+
+    if (playerCart.length > 5) {
+        alert("opps!! you have already selected 5 player")
+        tableBody.removeChild(tableBody.lastChild)
+    }
+
+    document.getElementById('total-added-player').innerText = playerCart.length
+    display(playerCart)
+
+}
 
 // -----------calculating player cost--------//
 
@@ -64,7 +67,6 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 
     const playerExpenses = document.getElementById('player-expense')
     playerExpenses.innerText = totalPlayerCost
-
 
     // --------Calculating Total Cost ------------//
 
@@ -80,8 +82,6 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
         const totalExpense = document.getElementById('total-expense')
 
         totalExpense.innerText = totalCost
-
-
     })
 })
 
