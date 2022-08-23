@@ -18,30 +18,8 @@ function display(totalPlayer) {
     }
 }
 
-// --------- Button disable ---------//
-
-function disableBtn1() {
-    document.getElementById('btn-1').disabled = true;
-}
-
-function disableBtn2() {
-    document.getElementById('btn-2').disabled = true;
-}
-function disableBtn3() {
-    document.getElementById('btn-3').disabled = true;
-}
-function disableBtn4() {
-    document.getElementById('btn-4').disabled = true;
-}
-function disableBtn5() {
-    document.getElementById('btn-5').disabled = true;
-}
-function disableBtn6() {
-    document.getElementById('btn-6').disabled = true;
-}
 
 function addToCart(element) {
-
     const playerName = element.parentNode.parentNode.children[0].innerText
     const playerObj = { playerName: playerName }
     playerCart.push(playerObj)
@@ -55,6 +33,30 @@ function addToCart(element) {
     display(playerCart)
 
 }
+
+// --------- Button disable ---------//
+
+function disableBtn1() {
+    document.getElementById('btn-1').disabled = true;
+}
+
+function disableBtn2() {
+    document.getElementById('btn-2').disabled = true;
+}
+function disableBtn3() {
+    document.getElementById('btn-3').disabled = true;
+
+}
+function disableBtn4() {
+    document.getElementById('btn-4').disabled = true;
+}
+function disableBtn5() {
+    document.getElementById('btn-5').disabled = true;
+}
+function disableBtn6() {
+    document.getElementById('btn-6').disabled = true;
+}
+
 
 // -----------calculating player cost--------//
 
